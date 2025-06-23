@@ -1,0 +1,217 @@
+*, 
+*::before, 
+*::after {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('YoungSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.backgroundrecept {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: clamp(200px, 100vw, 600px);
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+  min-height: 100vh;
+  width: 100vw;
+  gap: 3rem;
+  font-family: 'YoungSerif', sans-serif;
+  margin-top: 5rem;
+
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  aspect-ratio: 2.2 / 1;
+  
+}
+
+header img {
+  display: block;
+  height: 100%; 
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+header h1 {
+  width: 100%;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+header p {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.preperation {
+  background-color: rgba(169, 40, 145, 0.05);
+  padding-right: 2rem;
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.preperation h2 {
+  text-align: left;
+  color: purple;
+
+}
+
+
+.preperation ul li {
+  padding: 0.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+.ingredients h2,
+.nutrition h2,
+.instructions h2 {
+  color: rgba(118, 28, 53, 0.8);
+  padding-bottom: 1rem;
+}
+
+.ingredients ul,
+.instructions ul {
+  padding-left: 1rem;
+}
+
+.ingredients ul li,
+.instructions ul li {
+  padding: 0.5rem;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.instructions ol {
+  padding-left: 1rem;
+}
+
+.instructions ol li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 2rem;
+  
+  
+}
+
+.instructions h2 {
+  padding-bottom: 2rem;
+  padding-left: -1rem;
+}
+
+.hr {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.nutrition p {
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  
+}
+
+.carbsweight,
+.proteinweight,
+.fatweight,
+.caloriesweight {
+  color: rgba(118, 28, 53, 0.8);
+  font-weight: bold;
+}
+
+.nutritiontable {
+  display: grid;
+  grid-template-areas: 
+  "calories caloriesweight" 
+  "hr1 hr1" 
+  "carbs carbsweight" 
+  "hr2 hr2" 
+  "protein proteinweight" 
+  "hr3 hr3" 
+  "fat fatweight";
+  grid-row-gap: 0.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+.calories {
+  grid-area: calories;
+}
+.caloriesweight {
+  grid-area: caloriesweight;
+}
+.carbs {
+  grid-area: carbs;
+}
+.carbsweight {
+  grid-area: carbsweight;
+}
+.hr1 {
+  grid-area: hr1;
+  grid-column: span 2;
+}
+.protein {
+  grid-area: protein;
+}
+
+.proteinweight {
+  grid-area: proteinweight; 
+}
+.fat {
+  grid-area: fat;
+}
+.fatweight {
+  grid-area: fatweight;
+}
+.hr2 {
+  grid-area: hr2;
+  grid-column: span 2;
+}
+
+.hr3 {
+  grid-area: hr3;
+  grid-column: span 2;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  
+}
